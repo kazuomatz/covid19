@@ -1,0 +1,38 @@
+name: Auto Deploy to AWS S3
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    name: Deploy
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Python 3.7 for awscli
+      uses: actions/setup-python@v1
+      with:
+        version: '3.7'
+        architecture: 'x64'
+
+    - name: Install awscli
+      run: pip install --upgrade pip awscli
+
+    - name: Build
+      run: |
+        yarn install
+        yarn generate
+
+    - name: Copy to s3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: aws s3 cp ./dist ${{ secrets.S3_UPLOAD_PATH }} --recursive --acl public-read
+
+    - name: Notify to Slack
+      run: curl -X POST -H 'Content-type:application/json' --data '{"text":"'"${GITHUB_REPOSITORY}"'\n【Deploy Success】"}' ${{ secrets.SLACK_WEBHOOK }}
