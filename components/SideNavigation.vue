@@ -12,7 +12,7 @@
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
           <img
             class="SideNavigation-HeaderLogo"
-            src="/logo.svg"
+            src="/logo.png"
             :alt="
               $t(
                 '当サイトに掲載されている情報の正確性については万全を期していますが、静岡市は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
@@ -111,7 +111,7 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 Tokyo Metropolitan Government
+          2020 Shizuoka City
         </small>
       </footer>
     </div>
@@ -310,6 +310,7 @@ export default Vue.extend({
 }
 
 .SideNavigation-HeaderLogo {
+  width: 200px;
   @include lessThan($tiny) {
     width: 100px;
   }
