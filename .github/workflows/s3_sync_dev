@@ -32,7 +32,4 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: aws s3 cp ./dist ${{ secrets.S3_UPLOAD_PATH }} --recursive --acl public-read
-
-    - name: Notify to Slack
-      run: curl -X POST -H 'Content-type:application/json' --data '{"text":"'"${GITHUB_REPOSITORY}"'\n【Deploy Success】"}' ${{ secrets.SLACK_WEBHOOK }}
+      run: aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_DEV_PATH }} --recursive --acl public-read
