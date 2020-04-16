@@ -12,8 +12,12 @@
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
           <img
             class="SideNavigation-HeaderLogo"
-            src="/logo.svg"
-            :alt="$t('東京都')"
+            src="/logo.png"
+            :alt="
+              $t(
+                '当サイトに掲載されている情報の正確性については万全を期していますが、静岡市は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
+              )
+            "
           />
           <div class="SideNavigation-HeaderText">
             {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
@@ -107,7 +111,7 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 Tokyo Metropolitan Government
+          2020 Shizuoka City
         </small>
       </footer>
     </div>
@@ -143,7 +147,7 @@ export default Vue.extend({
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('市内の最新感染動向'),
           link: this.localePath('/')
         },
         {
@@ -159,8 +163,8 @@ export default Vue.extend({
         },
         {
           icon: 'mdi-account-multiple',
-          title: this.$t('都民の皆様へ'),
-          link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
+          title: this.$t('市民の皆様へ'),
+          link: 'https://www.city.shizuoka.lg.jp/388_000101.html'
         },
         {
           icon: 'mdi-domain',
@@ -169,17 +173,7 @@ export default Vue.extend({
           divider: true
         },
         {
-          title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
-          link:
-            'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
-        },
-        {
-          title: this.$t('東京都主催等 中止又は延期するイベント等'),
-          link:
-            'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
-        },
-        {
-          title: this.$t('知事からのメッセージ'),
+          title: this.$t('市長からのメッセージ'),
           link:
             'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
         },
@@ -192,8 +186,8 @@ export default Vue.extend({
           link: this.localePath('/contacts')
         },
         {
-          title: this.$t('東京都公式ホームページ'),
-          link: 'https://www.metro.tokyo.lg.jp/'
+          title: this.$t('静岡市公式ホームページ'),
+          link: 'https://www.city.shizuoka.lg.jp'
         }
       ]
     }
@@ -316,6 +310,7 @@ export default Vue.extend({
 }
 
 .SideNavigation-HeaderLogo {
+  width: 200px;
   @include lessThan($tiny) {
     width: 100px;
   }

@@ -1,4 +1,4 @@
-name: production deploy
+name: Statging Auto Deploy to AWS S3
 
 on:
   push:
@@ -7,68 +7,29 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    name: Deploy
+
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: master
+      - uses: actions/checkout@v1
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - name: Setup Python 3.7 for awscli
+        uses: actions/setup-python@v1
         with:
-          node-version: '10.x'
+          version: '3.7'
+          architecture: 'x64'
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      
-      - run: yarn install --frozen-lockfile
-      - run: yarn run test
-      - name: generate
+      - name: Install awscli
+        run: pip install --upgrade pip awscli
+
+      - name: Build
         run: |
-          echo "GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}" >> .env.production
-          cat .env.production
+          yarn install
           yarn run generate:deploy --fail-on-page-error
+
+      - name: Copy to s3
         env:
-          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-
-      - name: Temporarily disable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          branch: production
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: production
-          
-      - name: Enable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()  # Force to always run this step to ensure "include administrators" is always turned back on
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          owner: tokyo-metropolitan-gov
-          repo: covid19
-          branch: production
-      - name: Create GitHub release
-        uses: rymndhng/release-on-push-action@master
-        with:
-          bump_version_scheme: patch
-
-      - name: run delete_fbcache.sh
-        run: |
-          echo "FB_ACCESS_TOKEN=${FACEBOOK_ACCESS_TOKEN}" > .env
-          cd ui-test
-          ./delete_fbcache.sh
-        env:
-          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_PRODUCTION_PATH }} --recursive --acl public-read
