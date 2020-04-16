@@ -1,9 +1,9 @@
 // ==================
 // color
-$green-1: #456dd1;
-$green-2: #456dd1;
-$green-3: #456dd1;
-$green-4: #456dd1;
+$blue-1: #456dd1;
+$blue-2: #1f5bd1;
+$blue-3: #456dd1;
+$blue-4: #456dd1;
 $gray-1: #333;
 $gray-2: #4d4d4d;
 $gray-3: #707070;
@@ -113,12 +113,12 @@ $z-index-map: (
   display: inline-block;
   border-radius: 4px;
   background-color: $white;
-  border: 1px solid $green-1;
-  color: $green-1;
+  border: 1px solid $blue-1;
+  color: $blue-1;
   cursor: pointer;
 
   &:hover {
-    background-color: $green-1;
+    background-color: $blue-1;
     color: $white;
 
     > i {

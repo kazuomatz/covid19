@@ -3,7 +3,7 @@
     <v-overlay v-if="loading" color="#F8F9FA" opacity="1" z-index="9999">
       <div class="loader">
         <img src="/logo.png" alt="静岡市" />
-        <scale-loader color="#00A040" />
+        <scale-loader color="#456dd1" />
       </div>
     </v-overlay>
     <div v-if="hasNavigation" class="appContainer">
