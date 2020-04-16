@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer')
 const environment = process.env.NODE_ENV || 'development'
 
 const config: Configuration = {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -53,7 +53,7 @@ const config: Configuration = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' }
     ]
   },
   /*
@@ -124,6 +124,9 @@ const config: Configuration = {
       cookies: ['i18n_redirected']
     }
   ],
+  purgeCSS: {
+    mode: 'postcss'
+  },
   build: {
     plugins: [
       new webpack.ProvidePlugin({
