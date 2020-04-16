@@ -43,10 +43,10 @@
             v-if="this.$i18n.locales.length > 1"
             class="SideNavigation-Language"
           >
-            <label class="SideNavigation-LanguageLabel" for="LanguageSelector">
+            <label class="SideNavigation-LanguageLabel">
               {{ $t('多言語対応選択メニュー') }}
             </label>
-            <language-selector />
+            <!--<language-selector />-->
           </div>
         </div>
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
@@ -121,7 +121,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
-import LanguageSelector from '@/components/LanguageSelector.vue'
+/* import LanguageSelector from '@/components/LanguageSelector.vue' */
 import MenuList from '@/components/MenuList.vue'
 
 type Item = {
@@ -133,7 +133,7 @@ type Item = {
 
 export default Vue.extend({
   components: {
-    LanguageSelector,
+    /* LanguageSelector, */
     MenuList
   },
   props: {
