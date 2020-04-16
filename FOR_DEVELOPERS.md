@@ -135,9 +135,8 @@ $ docker-compose run --rm app yarn install
 
 | ブランチ | HTML類がbuildされ、更新されるブランチ | 更新されるWebサイト |
 | ---- | ---- | ---- |
-|`master`|`production`|本番サイト https://stopcovid19.metro.tokyo.lg.jp/|
-|`staging`|`gh-pages`|ステージングサイト https://stg-covid19-tokyo.netlify.com/|
-|`development`|`dev-pages`|開発用サイト https://dev-covid19-tokyo.netlify.com/|
+|`master`|`production`|本番サイト https://stopcovid19.city.shizuoka.lg.jp|
+|`staging`|`gh-pages`|ステージングサイト http://stop-covid19-shizuoka-staging.s3-website-ap-northeast-1.amazonaws.com|
 
 ---
 
