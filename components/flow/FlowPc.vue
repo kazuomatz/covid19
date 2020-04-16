@@ -164,7 +164,7 @@ export default {
 .SecondSectionWrapper {
   page-break-inside: avoid;
   > h3 {
-    color: $green-2;
+    color: $blue-2;
     font-size: 1.5rem;
     margin-bottom: 7px;
   }
@@ -266,7 +266,7 @@ export default {
 .Title {
   @include font-size(28);
 
-  color: $green-1;
+  color: $blue-1;
 
   &Small {
     @include font-size(20);

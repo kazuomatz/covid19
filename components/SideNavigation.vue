@@ -46,7 +46,7 @@
             <label class="SideNavigation-LanguageLabel">
               {{ $t('多言語対応選択メニュー') }}
             </label>
-            <!--<language-selector />-->
+            <language-selector />
           </div>
         </div>
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
@@ -54,6 +54,7 @@
 
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
+          <!--
           <a
             href="https://line.me/R/ti/p/%40822sysfc"
             target="_blank"
@@ -65,8 +66,9 @@
               <img src="/line.png" alt="LINE" />
             </picture>
           </a>
+          -->
           <a
-            href="https://twitter.com/tokyo_bousai"
+            href="https://twitter.com/shizuokashikoho"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
@@ -77,7 +79,7 @@
             </picture>
           </a>
           <a
-            href="https://www.facebook.com/tochokoho"
+            href="https://www.facebook.com/koho.shizuokacity"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
@@ -88,7 +90,7 @@
             </picture>
           </a>
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/kazuomatz/covid19"
             target="_blank"
             rel="noopener noreferrer"
             class="SideNavigation-SocialLink"
@@ -121,7 +123,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
-/* import LanguageSelector from '@/components/LanguageSelector.vue' */
+import LanguageSelector from '@/components/LanguageSelector.vue'
 import MenuList from '@/components/MenuList.vue'
 
 type Item = {
@@ -133,7 +135,7 @@ type Item = {
 
 export default Vue.extend({
   components: {
-    /* LanguageSelector, */
+    LanguageSelector,
     MenuList
   },
   props: {
@@ -177,6 +179,11 @@ export default Vue.extend({
           link:
             'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
         },
+        {
+          title: this.$t('民間支援情報ナビ For 静岡県版'),
+          link: 'https://vs-covid19-shizuoka.netlify.app'
+        },
+
         {
           title: this.$t('当サイトについて'),
           link: this.localePath('/about')
