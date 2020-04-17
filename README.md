@@ -2,7 +2,7 @@
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-[![静岡市 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/2704723/79231660-5fc80580-7ea1-11ea-9921-f049002ce7af.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+[![静岡市 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/2704723/79540781-ad23bd00-80c3-11ea-81c2-0302cb207102.png)](https://stopcovid19.metro.tokyo.lg.jp/)
 
 
 ## 貢献の仕方
