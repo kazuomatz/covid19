@@ -8,6 +8,11 @@ const environment = process.env.NODE_ENV || 'development'
 
 const config: Configuration = {
   mode: 'universal',
+  env: {
+    dataUrl:
+      process.env.DATA_URL ||
+      'http://stop-covid19-shizuoka-data-staging.s3-website-ap-northeast-1.amazonaws.com/data.json'
+  },
   /*
    ** Headers of the page
    */
@@ -97,6 +102,7 @@ const config: Configuration = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     ['@nuxtjs/dotenv', { filename: `.env.${environment}` }],
+    'nuxt-client-init-module',
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-purgecss',

@@ -39,7 +39,7 @@ import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
-import Data from '@/data/data.json'
+// import Data from '@/data/data.json'
 import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
@@ -61,13 +61,14 @@ export default Vue.extend({
   },
   data() {
     const data = {
-      Data,
+      Data: this.$store.state.data,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('市内の最新感染動向')
       },
       newsItems: News.newsItems
     }
+    console.log(data)
     return data
   },
   computed: {
