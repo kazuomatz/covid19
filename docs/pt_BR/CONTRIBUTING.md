@@ -33,7 +33,7 @@ Esta página exemplifica como você pode contribuir para o desenvolvimento deste
 ## Informação de desenvolvimento
 * Site de desenvolvimento https://dev-covid19-tokyo.netlify.com/
 * Ambiente de Staging https://stg-covid19-tokyo.netlify.com/
-* Ambiente de Produção https://stopcovid19.metro.tokyo.lg.jp/
+* Ambiente de Produção https://stopcovid19.city.shizuoka.lg.jp/
 * [Design](https://www.figma.com/file/V7vt80p2gauhdgTZeVNbgj/UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3?node-id=121%3A156)
 * [Transifex](https://www.transifex.com/stopcovid19-tokyo/stopcovid19tokyo)
 
