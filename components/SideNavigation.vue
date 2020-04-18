@@ -158,7 +158,13 @@ export default Vue.extend({
           link: this.localePath('/flow'),
           divider: true
         },
+
         {
+          title: this.$t('静岡市広報新型コロナウイルス関連情報'),
+          link: 'https://www.city.shizuoka.lg.jp/388_000101.html'
+        },
+
+/*      {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')
@@ -179,6 +185,8 @@ export default Vue.extend({
           link:
             'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
         },
+
+ */
         {
           title: this.$t('民間支援情報ナビ For 静岡県版'),
           link: 'https://vs-covid19-shizuoka.netlify.app'
@@ -188,10 +196,11 @@ export default Vue.extend({
           title: this.$t('当サイトについて'),
           link: this.localePath('/about')
         },
+        /*
         {
           title: this.$t('お問い合わせ先一覧'),
           link: this.localePath('/contacts')
-        },
+        },*/
         {
           title: this.$t('静岡市公式ホームページ'),
           link: 'https://www.city.shizuoka.lg.jp'

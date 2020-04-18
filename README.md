@@ -1,6 +1,6 @@
 # 静岡市 新型コロナウイルス感染症対策サイト
 
-[![静岡市 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/2704723/79540781-ad23bd00-80c3-11ea-81c2-0302cb207102.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+[![静岡市 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/2704723/79540781-ad23bd00-80c3-11ea-81c2-0302cb207102.png)](https://stopcovid19.city.shizuoka.lg.jp/)
 
 ## ライセンス
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。
