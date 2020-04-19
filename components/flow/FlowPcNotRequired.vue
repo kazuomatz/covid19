@@ -36,7 +36,7 @@
             <span>{{ $t('症状が良くならない場合は') }}</span>
           </template>
           <template v-slot:advisory>
-            <strong>{{ $t('新型コロナ受診相談窓口（日本語のみ）') }}</strong>
+            <strong>{{ $t('新型コロナ受診相談窓口') }}</strong>
           </template>
         </i18n>
       </div>
