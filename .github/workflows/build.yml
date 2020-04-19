@@ -3,7 +3,7 @@ name: build check
 on:
   push:
     branches:
-      - staging-shizuoka
+      - staging
 jobs:
   build:
     runs-on: ubuntu-18.04
