@@ -51,21 +51,21 @@
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
       <div :class="$style.LargerText">
-        {{ $t('新型コロナコールセンター') }}
+        {{ $t('静岡市保健所　保健予防課') }}
       </div>
       <div :class="$style.SmallerText">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
+        {{ $t('8時30分～17時15分（平日）') }}
       </div>
 
       <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0570550571">
+        <a :class="$style.TelLink" href="tel:0542493172">
           <img
             :class="$style.TelLinkIcon"
             src="/flow/phone-24px.svg"
             aria-hidden="true"
             :alt="$t('電話番号')"
           />
-          0570-550571
+          054-249-3172
         </a>
       </div>
     </div>

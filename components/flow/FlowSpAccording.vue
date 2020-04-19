@@ -78,9 +78,6 @@
         <span :class="$style.fzXLLarge">{{ $t('PCR検査') }}</span>{{ $t('※') }}
         <!-- eslint-enable -->
       </span>
-      <span :class="$style.break">
-        {{ $t('東京都健康安全研究センター等') }}
-      </span>
       <small :class="[$style.note, $style.fzSmall, $style.break]">
         {{
           $t(
@@ -150,7 +147,7 @@
             </template>
             <template v-slot:advisory>
               <strong :class="$style.advisory">
-                {{ $t('新型コロナ受診相談窓口（日本語のみ）') }}
+                {{ $t('新型コロナ受診相談窓口') }}
               </strong>
             </template>
           </i18n>
