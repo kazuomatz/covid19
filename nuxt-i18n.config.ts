@@ -22,6 +22,7 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
       file: 'ja.json',
       description: 'Japanese'
     },
+    /*
     {
       code: 'en',
       name: 'English',
@@ -66,6 +67,7 @@ const options: NuxtVueI18n.Options.AllOptionsInterface = {
       file: 'ja-Hira.json',
       description: 'Easy Japanese'
     }
+    */
   ]
 }
 

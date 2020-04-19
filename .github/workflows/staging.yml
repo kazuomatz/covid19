@@ -3,7 +3,7 @@ name: Statging Auto Deploy to AWS S3
 on:
   push:
     branches:
-      - staging
+      - staging-shizuoka
 
 jobs:
   deploy:
