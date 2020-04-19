@@ -2,7 +2,7 @@
   <div v-if="isDevelopmentMode" class="DevelopmentModeMark">
     開発中（development mode）
     <a
-      href="https://stopcovid19.metro.tokyo.lg.jp/"
+      href="https://stopcovid19.city.shizuoka.lg.jp/"
       target="_blank"
       rel="noopener noreferrer"
     >
