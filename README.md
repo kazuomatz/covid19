@@ -80,11 +80,11 @@ $ docker-compose run --rm app yarn install
 
 `staging` ブランチがアップデートされると、自動的にHTMLが生成され、staging用サイト http://stop-covid19-shizuoka-staging.s3-website-ap-northeast-1.amazonaws.com/ が更新されます。
 
-`development` ブランチがアップデートされると、自動的にHTMLが生成され、開発用サイト http://stop-covid19-shizuoka-dev.s3-website-ap-northeast-1.amazonaws.com/ が更新されます。
+`dev-shizuoka` ブランチがアップデートされると、自動的にHTMLが生成され、開発用サイト http://stop-covid19-shizuoka-dev.s3-website-ap-northeast-1.amazonaws.com/ が更新されます。
 
 ### ブランチルール
 
-development, dev-hotfix 以外は Pull Request は禁止です。
+dev-shizuoka, dev-hotfix 以外は Pull Request は禁止です。
 Pull Request を送る際の branch は、以下のネーミングルールでお願いします。
 
 機能追加系： feature/#{ISSUE_ID}-#{branch_title_name}  
@@ -93,7 +93,7 @@ Pull Request を送る際の branch は、以下のネーミングルールで�
 #### 基本的なブランチ
 | 目的 | ブランチ | 確認URL | 備考 |
 | ---- | -------- | ---- | ---- |
-| 開発 | development | http://stop-covid19-shizuoka-dev.s3-website-ap-northeast-1.amazonaws.com/ | base branch。基本はこちらに Pull Requestを送ってください |
+| 開発 | dev-shizuoka | http://stop-covid19-shizuoka-dev.s3-website-ap-northeast-1.amazonaws.com/ | base branch。基本はこちらに Pull Requestを送ってください |
 | ステージング | staging | http://stop-covid19-shizuoka-staging.s3-website-ap-northeast-1.amazonaws.com/ |管理者以外の Pull Request は禁止です |
 | 本番 | master | https://stopcovid19.city.shizuoka.lg.jp/ | 管理者以外の Pull Request は禁止です |
 | 緊急適用用 | dev-hotfix | なし | 急ぎ本番に適用するべき修正。管理者から依頼された場合こちらを使ってください |
