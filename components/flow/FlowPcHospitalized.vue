@@ -47,5 +47,8 @@
     margin: 0 !important;
     width: 50%;
   }
+  .FlowPcHospitalizedHeading {
+    font-size: 1.3rem;
+  }
 }
 </style>
