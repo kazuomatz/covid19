@@ -18,7 +18,7 @@
         </div>
         <div class="PrintMeta-QRWrapper">
           <div class="PrintMeta-QR flex-shrink-0" flat tile color="transparent">
-            <img src="/site-qr.svg" :alt="$t('2次元コード')" />
+            <img src="/site-qr.png" :alt="$t('2次元コード')" />
           </div>
           <div class="flex-shrink-0" flat tile color="transparent">
             <p class="PrintMeta-Text">
