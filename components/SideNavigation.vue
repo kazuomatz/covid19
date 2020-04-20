@@ -12,7 +12,7 @@
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
           <img
             class="SideNavigation-HeaderLogo"
-            src="/logo.png"
+            src="/logo.svg"
             :alt="
               $t(
                 '当サイトに掲載されている情報の正確性については万全を期していますが、静岡市は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
