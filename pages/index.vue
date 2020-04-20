@@ -27,7 +27,7 @@
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
       <inspection-persons-number-card />
-      <telephone-advisory-reports-number-card />
+      <consultation-desk-reports-number-card />
     </v-row>
     <v-divider />
   </div>
@@ -45,7 +45,8 @@ import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsC
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
-import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
+import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
+
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -57,7 +58,7 @@ export default Vue.extend({
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
     InspectionPersonsNumberCard,
-    TelephoneAdvisoryReportsNumberCard
+    ConsultationDeskReportsNumberCard
   },
   data() {
     const data = {
