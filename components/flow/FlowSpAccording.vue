@@ -137,22 +137,6 @@
         </div>
         <p>{{ $t('一般の医療機関を受診') }}</p>
       </div>
-      <div :class="[$style.rect, $style.consult]">
-        <p>
-          <i18n path="{getWorse}{advisory}に相談">
-            <template v-slot:getWorse>
-              <i18n path="症状が良くならない場合は">
-                <span>{{ $t('症状が良くならない場合は') }}</span>
-              </i18n>
-            </template>
-            <template v-slot:advisory>
-              <strong :class="$style.advisory">
-                {{ $t('新型コロナ受診相談窓口') }}
-              </strong>
-            </template>
-          </i18n>
-        </p>
-      </div>
     </div>
   </div>
 </template>

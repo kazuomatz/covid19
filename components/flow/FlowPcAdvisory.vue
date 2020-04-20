@@ -62,7 +62,7 @@
               aria-hidden="true"
               :alt="$t('FAX番号')"
             />
-            054-294-3153
+            054-249-3153
           </span>
         </div>
       </div>

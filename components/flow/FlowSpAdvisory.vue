@@ -43,7 +43,7 @@
               aria-hidden="true"
               :alt="$t('FAX番号')"
             />
-            <span>054-294-3153</span>
+            <span>054-249-3153</span>
           </div>
         </dd>
       </div>
