@@ -2,7 +2,7 @@
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-[![Tokyo COVID-19 Task Force website](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+[![Tokyo COVID-19 Task Force website](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.city.shizuoka.lg.jp/)
 
 ### [日本語](./../../README.md) | [English](./../en/README.md) | Español | [한국어](./../ko/README.md) | [繁體中文](./../zh_TW/README.md) | [简体中文](./../zh_CN/README.md) | [Tiếng Việt](./../vi/README.md) | [ภาษาไทย](./../th/README.md) | [Français](./../fr/README.md) | [Português](./../pt_BR/README.md)
 
@@ -86,7 +86,7 @@ Please use the variable to detect which environment is used at the runtime.
 ### Implementación en entornos de preparación y producción
 
 Cuando se actualiza la rama `master`, los archivos HTML se construirán automáticamente en la rama de `production`,
-y luego el sitio de producción (https://stopcovid19.metro.tokyo.lg.jp/) también se actualizará.
+y luego el sitio de producción (https://stopcovid19.city.shizuoka.lg.jp/) también se actualizará.
 
 Cuando se actualiza la rama `staging`, los archivos HTML se construirán automáticamente en la rama `gh-pages`,
   y luego el sitio de preparación (https://stg-covid19-tokyo.netlify.com/) también se actualizará.
@@ -110,12 +110,12 @@ Hotfix commit: hotfix/#{ISSUE_ID}-{branch_title_name}
 | Development | development | https://dev-covid19-tokyo.netlify.com/ | base branch. Basically send a Pull Request here |
 | Hotfix branch | dev-hotfix | None | Fixes that should be applied to production in haste. Use this if requested by the administrator |
 | Staging | staging | https://stg-covid19-tokyo.netlify.com/ | For final confirmation before production. Non-admin pull requests are prohibited |
-Production | master | https://stopcovid19.metro.tokyo.lg.jp/ | Pull Requests other than Administrators are prohibited |
+Production | master | https://stopcovid19.city.shizuoka.lg.jp/ | Pull Requests other than Administrators are prohibited |
 
 #### Branch used by the system
 | Purpose | Branch | Confirmation URL | Remarks |
 | ---- | -------- | ---- | ---- |
-| Production site HTML | production | https://stopcovid19.metro.tokyo.lg.jp/ | Location where statically built HTML is located |
+| Production site HTML | production | https://stopcovid19.city.shizuoka.lg.jp/ | Location where statically built HTML is located |
 | Staging site HTML | gh-pages | https://stg-covid19-tokyo.netlify.com/ | Where to find statically built HTML |
 | For OGP working directory | deploy / new_ogp | None | For updating OGP |
 

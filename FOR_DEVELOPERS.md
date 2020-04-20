@@ -156,12 +156,12 @@ Pull Request を送る際のブランチは、以下のネーミングルール�
 | ---- | ---- | ---- | ---- | ---- |
 | 開発 | development | https://dev-covid19-tokyo.netlify.com/ | 全開発者 | base branch。基本は、この`development`ブランチに Pull Requestを送ってください。 |
 | ステージング | staging | https://stg-covid19-tokyo.netlify.com/ | 管理者のみ | 本番前の最終確認用。管理者以外の Pull Request は禁止です。 |
-| 本番 | master | https://stopcovid19.metro.tokyo.lg.jp/ | 管理者のみ | 管理者以外の Pull Request は禁止です。 |
+| 本番 | master | https://stopcovid19.city.shizuoka.lg.jp/ | 管理者のみ | 管理者以外の Pull Request は禁止です。 |
 
 ### 5-2. システムで利用しているブランチ
 
 | 目的 | ブランチ | 確認URL | 備考 |
 | ---- | -------- | ---- | ---- |
-| 本番サイトHTML | production | https://stopcovid19.metro.tokyo.lg.jp/ | 静的ビルドされたHTMLが置いてある場所 |
+| 本番サイトHTML | production | https://stopcovid19.city.shizuoka.lg.jp/ | 静的ビルドされたHTMLが置いてある場所 |
 | ステージングサイト HTML | gh-pages | https://stg-covid19-tokyo.netlify.com/ | 静的ビルドされたHTMLが置いてある場所 |
 | OGP作業用 | deploy/new_ogp | なし | OGPの更新用 |
