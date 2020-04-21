@@ -1,5 +1,9 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date">
+    <div class="portal-link">
+      <a href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_1" target="_blank">発生状況について（感染が疑われる経路含む）</a>
+      <i aria-label="別タブで開く" role="img" class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light" style="font-size: 15px;"></i>
+    </div>
     <template v-slot:button>
       <span />
     </template>
@@ -102,6 +106,12 @@
   padding: 8px;
   font-size: 12px;
   color: $gray-3;
+}
+.portal-link {
+  margin-top: -30px;
+  a:link {
+    text-decoration: none;
+  }
 }
 </style>
 
