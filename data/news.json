@@ -1,19 +1,44 @@
 {
-    "newsItems": [
-        {
-            "date": "2020\/04\/12",
-            "url": null,
-            "text": " [最新情報動画] 知事から市民の皆様へ (4\/12)"
-        },
-        {
-            "date": "2020\/04\/12",
-            "url": null,
-            "text": " 新型コロナウイルスに関連した患者の発生について(第191報）"
-        },
-        {
-            "date": "2020\/04\/12",
-            "url": null,
-            "text": " 新型コロナウイルス感染症でこれから入院される方へ"
-        }
-    ]
+  "newsItems": [
+    {
+      "date": "2020/04/17",
+      "text": "緊急事態宣言等を受けての市長コメント（動画）",
+      "url": "https://www.youtube.com/watch?v=lUalZeMmJ-s"
+    },
+    {
+      "date": "2020/04/16",
+      "text": "緊急事態宣言が全都道府県に拡大されることを受けての市長メッセージ",
+      "url": "https://www.city.shizuoka.lg.jp/000_000253.html"
+    },
+    {
+      "date": "2020/04/21",
+      "text": "静岡市新型コロナウイルス感染症に係る公共施設の休館及び再開について",
+      "url": "https://www.city.shizuoka.lg.jp/556_000486.html"
+    },
+    {
+      "date": "2020/04/21",
+      "text": "新型コロナウイルス感染症対策について、消費者の皆様へのお願い（マスク等）",
+      "url": "https://www.city.shizuoka.lg.jp/369_000195.html"
+    },
+    {
+      "date": "2020/04/20",
+      "text": "新型コロナウイルス感染症対策に係る公園内活動等の対応について",
+      "url": "https://www.city.shizuoka.lg.jp/551_000119.html"
+    },
+    {
+      "date": "2020/04/20",
+      "text": "市立小・中学校における臨時休業の延長等について",
+      "url": "https://www.city.shizuoka.lg.jp/000852315.pdf"
+    },
+    {
+      "date": "2020/04/20",
+      "text": "新型コロナウイルス感染症に関する事業者向け情報を更新しました",
+      "url": "https://www.city.shizuoka.lg.jp/553_000070.html"
+    },
+    {
+      "date": "2020/04/20",
+      "text": "市立小学校臨時休校の延長に伴う放課後児童クラブの開所等について",
+      "url": "https://www.city.shizuoka.lg.jp/919_000173.html"
+    }
+  ]
 }

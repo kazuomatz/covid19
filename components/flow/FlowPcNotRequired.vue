@@ -30,16 +30,6 @@
           {{ $t('一般の医療機関を受診') }}
         </li>
       </ul>
-      <div :class="$style.nextAction">
-        <i18n path="{getWorse}{advisory}に相談" :class="$style.content">
-          <template v-slot:getWorse>
-            <span>{{ $t('症状が良くならない場合は') }}</span>
-          </template>
-          <template v-slot:advisory>
-            <strong>{{ $t('新型コロナ受診相談窓口（日本語のみ）') }}</strong>
-          </template>
-        </i18n>
-      </div>
     </div>
   </div>
 </template>
@@ -76,27 +66,29 @@
 
 .actionContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 80%;
 }
 
 .actions {
-  width: 49%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 0 !important; // FIXME: for ul element
 }
 
 .actionsList {
   list-style-type: none;
   text-align: start;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   display: flex;
   align-items: center;
+  width: 100%;
+  font-size: 1.3rem;
 
   &Icon {
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 50px;
+    min-height: 50px;
     display: block;
     margin-right: 10px;
   }
@@ -106,22 +98,4 @@
   margin-right: 10px;
 }
 
-.nextAction {
-  width: 49%;
-  padding: 1rem;
-  border: $blue-1 1.5px solid;
-  border-radius: 4px;
-  text-align: center;
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-  }
-
-  strong {
-    font-size: 1.5rem;
-  }
-}
 </style>
