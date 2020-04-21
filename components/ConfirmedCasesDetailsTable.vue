@@ -219,16 +219,17 @@ $default-boxdiff: 35px;
 
     > .pillar {
       // [6列] 1/6
-      width: calc((100% + #{$default-bdw} * 2) / 6 - #{$default-bdw} * 3);
+      width: calc((100% + #{$default-bdw} * 2) / 4 - #{$default-bdw} * 3);
     }
 
     > .group {
       // [6列] 5/6
-      width: calc((100% + #{$default-bdw} * 2) / 6 * 5 + #{$default-bdw});
+      width: calc((100% + #{$default-bdw} * 2) / 4 * 3 + #{$default-bdw});
     }
   }
 
-  &.hospitalized {
+
+  /* &.hospitalized {
     margin-left: $default-bdw;
     // [5列] 3/5
     width: calc(100% / 3 * 1.5 - #{$default-bdw});
@@ -242,7 +243,7 @@ $default-boxdiff: 35px;
       // [3列] 2/3
       width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
     }
-  }
+  } */
 
   &.minor,
   &.severe {
@@ -250,7 +251,7 @@ $default-boxdiff: 35px;
     // [2列] 1/2
     width: calc(100% / 2 - #{$default-bdw});
   }
-
+  &.hospitalized,
   &.deceased,
   &.recovered {
     margin-left: $default-bdw;
@@ -341,18 +342,18 @@ $default-boxdiff: 35px;
     &.confirmed {
       > .pillar {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 - #{px2vw($bdw, $vw)} * 3
+          (100% + #{px2vw($bdw, $vw)} * 2) / 4 - #{px2vw($bdw, $vw)} * 3
         );
       }
 
       > .group {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)}
+          (100% + #{px2vw($bdw, $vw)} * 2) / 4 * 3 + #{px2vw($bdw, $vw)}
         );
       }
     }
 
-    &.hospitalized {
+    /* &.hospitalized {
       margin-left: px2vw($bdw, $vw);
       width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
 
@@ -367,18 +368,18 @@ $default-boxdiff: 35px;
           (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
         );
       }
-    }
+    } */
 
     &.minor,
     &.severe {
       margin-left: px2vw($bdw, $vw);
       width: calc(100% / 2 - #{px2vw($bdw, $vw)});
     }
-
+    &.hospitalized,
     &.deceased,
     &.recovered {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 3 - #{px2vw($bdw, $vw)});
     }
   }
 }
