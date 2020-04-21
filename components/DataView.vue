@@ -33,7 +33,7 @@
             </a>
           </div>
         </div>
-
+        <!---
         <div v-if="this.$route.query.embed != 'true'" class="Footer-Right">
           <button class="DataView-Share-Opener" @click="toggleShareMenu">
             <svg
@@ -131,6 +131,7 @@
             </div>
           </div>
         </div>
+        ---->
       </div>
     </div>
 
