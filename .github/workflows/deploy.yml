@@ -25,9 +25,11 @@ jobs:
 
       - name: Build
         run: |
-          yarn install
-          yarn run generate:deploy --fail-on-page-error
-
+          echo "GOOGLE_ANALYTICS_ID=${{ GOOGLE_ANALYTICS_ID }}" >> .env.production
+                    cat .env.production
+                    yarn run generate:deploy --fail-on-page-error
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
       - name: Copy to s3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
