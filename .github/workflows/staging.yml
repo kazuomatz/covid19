@@ -34,4 +34,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: | 
           aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_STAGING_PATH }} --recursive --acl public-read
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
+          
