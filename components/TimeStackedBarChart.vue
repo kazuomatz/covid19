@@ -3,9 +3,6 @@
     <template v-slot:button>
       <ul :class="$style.GraphDesc">
         <li>
-          {{ $t('（注）医療機関が保険適用で行った検査は含まれていない') }}
-        </li>
-        <li>
           {{ $t('（注）同一の対象者について複数の検体を検査する場合あり') }}
         </li>
         <li>

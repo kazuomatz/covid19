@@ -5,11 +5,7 @@
       :title-id="'details-of-confirmed-cases'"
       :date="Data.patients.date"
     >
-      <template v-slot:button>
-        <p :class="$style.note">
-          {{ $t('（注）チャーター機帰国者、クルーズ船乗客等は含まれていない') }}
-        </p>
-      </template>
+      <template v-slot:button />
       <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
         v-bind="confirmedCases"
