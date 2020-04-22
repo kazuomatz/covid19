@@ -15,9 +15,7 @@
         <span>{{ $t('注釈') }} </span>
       </div>
     </div>
-    <!--
     <whats-new class="mb-4" :items="newsItems" />
-    -->
     <static-info
       class="mb-4"
       :url="localePath('/flow')"
@@ -39,7 +37,7 @@
 import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
-//import WhatsNew from '@/components/WhatsNew.vue'
+import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
 import News from '@/data/news.json'
@@ -48,12 +46,13 @@ import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCar
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
 import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
+
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
   components: {
     PageHeader,
-    //WhatsNew,
+    WhatsNew,
     StaticInfo,
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
