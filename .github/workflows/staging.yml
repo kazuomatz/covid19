@@ -14,14 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Setup Python 3.7 for awscli
-        uses: actions/setup-python@v1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          version: '3.7'
-          architecture: 'x64'
-
-      - name: Install awscli
-        run: pip install --upgrade pip awscli
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Build
         run: |
@@ -29,9 +26,5 @@ jobs:
           yarn run generate:deploy --fail-on-page-error
 
       - name: Copy to s3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: | 
+        run: |
           aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_STAGING_PATH }} --recursive --acl public-read
-          
