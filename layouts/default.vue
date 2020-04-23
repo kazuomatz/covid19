@@ -71,7 +71,9 @@ export default Vue.extend({
       isOpenNavigation: false
     }
   },
-  mounted() {
+  async mounted() {
+    await this.$store.dispatch('data/fetchData')
+
     this.loading = false
     this.getMatchMedia().addListener(this.hideNavigation)
   },
