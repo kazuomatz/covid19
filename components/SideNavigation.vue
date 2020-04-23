@@ -164,7 +164,7 @@ export default Vue.extend({
           link: 'https://www.city.shizuoka.lg.jp/388_000101.html'
         },
 
-/*      {
+        /*      {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')
@@ -183,10 +183,8 @@ export default Vue.extend({
         */
         {
           title: this.$t('市長からのメッセージ'),
-          link:
-            'https://www.city.shizuoka.lg.jp/000_000253.html'
+          link: 'https://www.city.shizuoka.lg.jp/000_000253.html'
         },
-
 
         {
           title: this.$t('民間支援情報ナビ For 静岡県版（非公式）'),
@@ -201,7 +199,7 @@ export default Vue.extend({
         {
           title: this.$t('お問い合わせ先一覧'),
           link: this.localePath('/contacts')
-        },*/
+        }, */
         {
           title: this.$t('静岡市公式ホームページ'),
           link: 'https://www.city.shizuoka.lg.jp'

@@ -1,8 +1,17 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date">
     <div class="portal-link">
-      <a href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_1" target="_blank">発生状況について（感染が疑われる経路含む）</a>
-      <i aria-label="別タブで開く" role="img" class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light" style="font-size: 15px;"></i>
+      <a
+        href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_1"
+        target="_blank"
+        >発生状況について（感染が疑われる経路含む）</a
+      >
+      <i
+        aria-label="別タブで開く"
+        role="img"
+        class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light"
+        style="font-size: 15px;"
+      />
     </div>
     <template v-slot:button>
       <span />
@@ -11,8 +20,7 @@
       :ref="'displayedTable'"
       :headers="chartData.headers"
       :items="chartData.datasets"
-      :items-per-page="-1"
-      :hide-default-footer="true"
+      :items-per-page="50"
       :height="240"
       :fixed-header="true"
       :mobile-breakpoint="0"
@@ -50,7 +58,6 @@
 <style lang="scss">
 .cardTable {
   &.v-data-table {
-    box-shadow: 0 -20px 12px -12px #0003 inset;
     th {
       padding: 8px 10px;
       height: auto;

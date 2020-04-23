@@ -8,7 +8,7 @@
           }}</span>
         </div>
         <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          <div v-html="'帰国者・接触者相談センター<br/>（静岡市保健所）'"></div>
+          <div v-html="'帰国者・接触者相談センター<br/>（静岡市保健所）'" />
         </div>
         <div>
           <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
