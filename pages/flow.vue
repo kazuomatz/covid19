@@ -5,7 +5,7 @@
       <page-header class="Flow-Heading-Title">
         {{ $t('新型コロナウイルス感染症が心配なときに') }}
       </page-header>
-      <printer-button :wrapper-class="'Flow-PullRight'" to="/print/flow" />
+      <!--- printer-button :wrapper-class="'Flow-PullRight'" to="/print/flow" / --->
     </div>
     <div>
       <div class="only-pc" aria-hidden="true">
@@ -22,7 +22,7 @@
 import Vue from 'vue'
 import { TranslateResult } from 'vue-i18n'
 import CovidIcon from '@/static/covid.svg'
-import PrinterButton from '@/components/PrinterButton.vue'
+// import PrinterButton from '@/components/PrinterButton.vue'
 import FlowPc from '@/components/flow/FlowPc.vue'
 import FlowSp from '@/components/flow/FlowSp.vue'
 import PageHeader from '@/components/PageHeader.vue'
@@ -31,7 +31,7 @@ export default Vue.extend({
   components: {
     CovidIcon,
     PageHeader,
-    PrinterButton,
+    // PrinterButton,
     FlowPc,
     FlowSp
   },
