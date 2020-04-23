@@ -35,7 +35,6 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
-    console.log(this.$store.state.data)
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(
       this.$store.state.data.data.main_summary
