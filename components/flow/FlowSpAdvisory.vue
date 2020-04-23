@@ -2,10 +2,7 @@
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
       {{ $t('新型コロナ受診相談窓口') }}
-      <small
-        :class="[$style.break, $style.fzRegular, $style.mt5]"
-        style="white-space:pre-wrap; word-wrap:break-word;"
-      >
+      <small :class="[$style.break, $style.fzRegular, $style.mt5]">
         {{ $t('帰国者・接触者相談センター（静岡市保健所）') }}
       </small>
     </h4>
@@ -67,7 +64,7 @@ export default {
 
 // advisory
 .open {
-  margin-top: px2vw(20);
+  margin-top: px2vw(0);
   display: flex;
   justify-content: center;
 
@@ -152,5 +149,10 @@ export default {
       }
     }
   }
+}
+.fzRegular {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 18px;
 }
 </style>

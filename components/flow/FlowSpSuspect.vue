@@ -20,14 +20,11 @@
     </ul>
 
     <div :class="$style.callcenter">
-      <p
-        :class="$style.fzLarge"
-        style="white-space:pre-wrap;text-align: center"
-      >
+      <p :class="$style.fzLarge">
         {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </p>
       <p :class="$style.open">
-        {{ $t('午前9時00分～午後8時00分、毎日') }}
+        {{ $t('毎日 09:00〜20:00') }}
       </p>
       <p :class="[$style.phone, $style.fzNumeric]">
         <span :class="$style.icon">
@@ -83,9 +80,14 @@ export default {
 .callcenter {
   margin-top: px2vw(25);
   text-align: center;
-
+  .fzLarge {
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 8vw;
+  }
   .open {
     margin-top: px2vw(10);
+    font-size: 6vw;
   }
 }
 

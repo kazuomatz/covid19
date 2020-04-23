@@ -57,7 +57,7 @@
         {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </div>
       <div :class="$style.SmallerText">
-        {{ $t('午前9時00分～午後8時00分、毎日') }}
+        {{ $t('毎日 09:00〜20:00') }}
       </div>
 
       <div :class="$style.Tel">
@@ -85,7 +85,7 @@
 
 .Tel {
   @include largerThan($medium) {
-    font-size: larger;
+    font-size: 24px;
   }
 }
 
@@ -233,6 +233,7 @@
 }
 
 .SmallerText {
-  font-size: smaller;
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>

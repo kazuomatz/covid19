@@ -7,10 +7,7 @@
             $t('新型コロナ受診相談窓口')
           }}</span>
         </div>
-        <div
-          :class="[$style.AdvisoryContentsColsSentense, 'mt-4']"
-          style="white-space:pre-wrap; word-wrap:break-word;"
-        >
+        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
           {{ $t('帰国者・接触者相談センター（静岡市保健所）') }}
         </div>
         <div>
@@ -188,6 +185,10 @@
       font-size: 18px;
       font-weight: bold;
     }
+  }
+  .AdvisoryContentsColsSentense {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 </style>
