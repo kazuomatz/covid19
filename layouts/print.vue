@@ -48,7 +48,9 @@ export default Vue.extend({
       loading: true
     }
   },
-  mounted() {
+  async mounted() {
+    await this.$store.dispatch('data/fetchData')
+
     this.loading = false
     window.addEventListener('load', this.print)
   },
