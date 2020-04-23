@@ -7,8 +7,11 @@
             $t('新型コロナ受診相談窓口')
           }}</span>
         </div>
-        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          <div v-html="'帰国者・接触者相談センター<br/>（静岡市保健所）'"></div>
+        <div
+          :class="[$style.AdvisoryContentsColsSentense, 'mt-4']"
+          style="white-space:pre-wrap; word-wrap:break-word;"
+        >
+          {{ $t('帰国者・接触者相談センター（静岡市保健所）') }}
         </div>
         <div>
           <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
@@ -95,7 +98,7 @@
     }
 
     &Title {
-      font-size: 26px;
+      font-size: 24px;
       line-height: 28px;
     }
 

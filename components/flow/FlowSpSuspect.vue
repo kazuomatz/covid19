@@ -20,17 +20,20 @@
     </ul>
 
     <div :class="$style.callcenter">
-      <p :class="$style.fzLarge">
-        {{ $t('静岡市保健所　保健予防課') }}
+      <p
+        :class="$style.fzLarge"
+        style="white-space:pre-wrap;text-align: center"
+      >
+        {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </p>
       <p :class="$style.open">
-        {{ $t('8時30分～17時15分（平日）') }}
+        {{ $t('午前9時00分～午後8時00分、毎日') }}
       </p>
       <p :class="[$style.phone, $style.fzNumeric]">
         <span :class="$style.icon">
           <phone-icon alt="Phone" />
         </span>
-        <a href="tel:0542493172">054-249-3172</a>
+        <a href="tel:0570080567">0570-08-0567</a>
       </p>
     </div>
 

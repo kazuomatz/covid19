@@ -50,22 +50,25 @@
     </div>
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="$style.LargerText">
-        {{ $t('静岡市保健所　保健予防課') }}
+      <div
+        :class="$style.LargerText"
+        style="white-space:pre-wrap; ;text-align: center;word-wrap:break-word;"
+      >
+        {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </div>
       <div :class="$style.SmallerText">
-        {{ $t('8時30分～17時15分（平日）') }}
+        {{ $t('午前9時00分～午後8時00分、毎日') }}
       </div>
 
       <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0542493172">
+        <a :class="$style.TelLink" href="tel:0570080567">
           <img
             :class="$style.TelLinkIcon"
             src="/flow/phone-24px.svg"
             aria-hidden="true"
             :alt="$t('電話番号')"
           />
-          054-249-3172
+          0570-08-0567
         </a>
       </div>
     </div>
