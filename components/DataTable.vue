@@ -20,7 +20,7 @@
       :ref="'displayedTable'"
       :headers="chartData.headers"
       :items="chartData.datasets"
-      :items-per-page="100"
+      :items-per-page="50"
       :height="240"
       :fixed-header="true"
       :mobile-breakpoint="0"
