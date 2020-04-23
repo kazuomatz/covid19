@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer')
 const environment = process.env.NODE_ENV || 'development'
 
 const config: Configuration = {
-  mode: 'spa',
+  mode: 'universal',
   /*
    ** Headers of the page
    */
