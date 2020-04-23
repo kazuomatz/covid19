@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -23,6 +22,9 @@ export default {
     TimeBarChart
   },
   data() {
+    // Vuexからデータを取得
+    const Data = this.$store.state.data.data
+
     // 帰国者・接触者 電話相談センター 相談件数
     const querentsGraph = formatGraph(Data.querents.data)
 
