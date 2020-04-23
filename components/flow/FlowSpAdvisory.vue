@@ -64,7 +64,7 @@ export default {
 
 // advisory
 .open {
-  margin-top: px2vw(20);
+  margin-top: px2vw(0);
   display: flex;
   justify-content: center;
 
@@ -149,5 +149,10 @@ export default {
       }
     }
   }
+}
+.fzRegular {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 18px;
 }
 </style>

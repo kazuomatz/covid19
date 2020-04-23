@@ -8,7 +8,7 @@
           }}</span>
         </div>
         <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          <div v-html="'帰国者・接触者相談センター<br/>（静岡市保健所）'" />
+          {{ $t('帰国者・接触者相談センター（静岡市保健所）') }}
         </div>
         <div>
           <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
@@ -95,7 +95,7 @@
     }
 
     &Title {
-      font-size: 26px;
+      font-size: 24px;
       line-height: 28px;
     }
 
@@ -185,6 +185,10 @@
       font-size: 18px;
       font-weight: bold;
     }
+  }
+  .AdvisoryContentsColsSentense {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 </style>
