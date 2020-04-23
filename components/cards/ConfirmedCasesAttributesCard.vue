@@ -24,7 +24,7 @@ export default {
     DataTable
   },
   data() {
-    // Vuexからデータを取得
+    // // Vuexからデータを取得
     const Data = this.$store.state.data.data
 
     // 感染者数グラフ
@@ -62,7 +62,7 @@ export default {
     }
 
     const data = {
-      Data,
+      Data: this.$store.state.data.data,
       patientsTable,
       sumInfoOfPatients
     }
