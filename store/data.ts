@@ -1,7 +1,8 @@
 import { MutationTree, ActionTree } from 'vuex'
 
 export const state = () => ({
-  data: {} as any // TODO: dataの型定義ファイルを作る
+  data: {} as any,
+  news: {} as any
 })
 
 export type State = ReturnType<typeof state>
@@ -9,15 +10,21 @@ export type State = ReturnType<typeof state>
 export const mutations: MutationTree<State> = {
   setData(state, data) {
     state.data = data
+  },
+  setNews(state, news) {
+    state.news = news
   }
 }
 
 export const actions: ActionTree<State, State> = {
   async fetchData({ commit }) {
-    const dataUrl =
-      'http://stop-covid19-shizuoka-data-staging.s3-website-ap-northeast-1.amazonaws.com/data.json'
-    const data = await this.$axios.$get<State['data']>(dataUrl)
+    const dataUrl = process.env.DATA_URL + 'data.json'
 
+    const data = await this.$axios.$get<State['data']>(dataUrl)
     commit('setData', data)
+
+    const newsUrl = process.env.DATA_URL + 'news.json'
+    const news = await this.$axios.$get<State['news']>(newsUrl)
+    commit('setNews', news)
   }
 }
