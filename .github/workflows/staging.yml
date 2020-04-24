@@ -23,7 +23,11 @@ jobs:
       - name: Build
         run: |
           yarn install
+          echo "DATA_URL=${DATA_BASE_URL}" >> .env.production
+          cat .env.production
           yarn run generate:deploy --fail-on-page-error
+        env:
+          DATA_BASE_URL: ${{ secrets.COVID_DATA_STAGING_BASE_URL }}
 
       - name: Copy to s3
         run: |
