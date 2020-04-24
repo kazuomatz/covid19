@@ -50,22 +50,25 @@
     </div>
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="$style.LargerText">
-        {{ $t('静岡市保健所　保健予防課') }}
+      <div
+        :class="$style.LargerText"
+        style="white-space:pre-wrap; ;text-align: center;word-wrap:break-word;"
+      >
+        {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </div>
       <div :class="$style.SmallerText">
-        {{ $t('8時30分～17時15分（平日）') }}
+        {{ $t('毎日 09:00〜20:00') }}
       </div>
 
       <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0542493172">
+        <a :class="$style.TelLink" href="tel:0570080567">
           <img
             :class="$style.TelLinkIcon"
             src="/flow/phone-24px.svg"
             aria-hidden="true"
             :alt="$t('電話番号')"
           />
-          054-249-3172
+          0570-08-0567
         </a>
       </div>
     </div>
@@ -82,7 +85,7 @@
 
 .Tel {
   @include largerThan($medium) {
-    font-size: larger;
+    font-size: 24px;
   }
 }
 
@@ -230,6 +233,7 @@
 }
 
 .SmallerText {
-  font-size: smaller;
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>

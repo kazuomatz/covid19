@@ -21,16 +21,16 @@
 
     <div :class="$style.callcenter">
       <p :class="$style.fzLarge">
-        {{ $t('静岡市保健所　保健予防課') }}
+        {{ $t('静岡市新型コロナなんでも相談ダイヤル') }}
       </p>
       <p :class="$style.open">
-        {{ $t('8時30分～17時15分（平日）') }}
+        {{ $t('毎日 09:00〜20:00') }}
       </p>
       <p :class="[$style.phone, $style.fzNumeric]">
         <span :class="$style.icon">
           <phone-icon alt="Phone" />
         </span>
-        <a href="tel:0542493172">054-249-3172</a>
+        <a href="tel:0570080567">0570-08-0567</a>
       </p>
     </div>
 
@@ -80,9 +80,14 @@ export default {
 .callcenter {
   margin-top: px2vw(25);
   text-align: center;
-
+  .fzLarge {
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 8vw;
+  }
   .open {
     margin-top: px2vw(10);
+    font-size: 6vw;
   }
 }
 
