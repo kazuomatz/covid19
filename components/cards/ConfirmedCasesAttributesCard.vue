@@ -7,7 +7,7 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'https://dataset.city.shizuoka.jp/dataset/1587117159'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1587798016'"
       :source="$t('オープンデータを入手')"
       :custom-sort="customSort"
     />
