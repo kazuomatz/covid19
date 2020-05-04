@@ -52,6 +52,12 @@
         <menu-list :items="items" @click="$emit('closeNavi', $event)" />
       </nav>
 
+      <a
+        href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_3"
+        target="_blank"
+      >
+        <img src="/dial.jpg" />
+      </a>
       <footer class="SideNavigation-Footer">
         <div class="SideNavigation-Social">
           <!--
@@ -152,10 +158,15 @@ export default Vue.extend({
           title: this.$t('市内の最新感染動向'),
           link: this.localePath('/')
         },
+
         {
           icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
-          link: this.localePath('/flow'),
+          link: this.localePath('/flow')
+        },
+        {
+          title: this.$t('新型コロナウイルスなんでも相談ダイヤル'),
+          link: 'https://www.city.shizuoka.lg.jp/388_000101.html#h2_3',
           divider: true
         },
 
@@ -164,7 +175,7 @@ export default Vue.extend({
           link: 'https://www.city.shizuoka.lg.jp/388_000101.html'
         },
 
-/*      {
+        /*      {
           icon: 'ParentIcon',
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')
@@ -183,10 +194,13 @@ export default Vue.extend({
         */
         {
           title: this.$t('市長からのメッセージ'),
-          link:
-            'https://www.city.shizuoka.lg.jp/000_000253.html'
+          link: 'https://www.city.shizuoka.lg.jp/000_000253.html'
         },
 
+        {
+          title: this.$t('商業者支援特設ウェブサイト「＃エール静岡」'),
+          link: 'https://www.at-s.com/city/yellshizuoka/'
+        },
 
         {
           title: this.$t('民間支援情報ナビ For 静岡県版（非公式）'),
@@ -201,7 +215,7 @@ export default Vue.extend({
         {
           title: this.$t('お問い合わせ先一覧'),
           link: this.localePath('/contacts')
-        },*/
+        }, */
         {
           title: this.$t('静岡市公式ホームページ'),
           link: 'https://www.city.shizuoka.lg.jp'
