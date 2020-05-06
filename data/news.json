@@ -1,7 +1,22 @@
 {
   "newsItems": [
     {
-      "date": "2020/05/01",
+      "date": "2020/05/06",
+      "text": "休業要請に基づく「新型コロナウイルス感染拡大防止協力金」のご案内について",
+      "url": "https://www.city.shizuoka.lg.jp/553_000080.html"
+    },
+    {
+      "date": "2020/05/05",
+      "text": "特別定額給付金のオンライン申請受付を開始します（5/11～）",
+      "url": "https://www.city.shizuoka.lg.jp/912_000143.html"
+    },
+    {
+      "date": "2020/05/05",
+      "text": "第8回　静岡市新型コロナウイルス感染症対策本部会議を開催しました。",
+      "url": "https://www.city.shizuoka.lg.jp/000853342.pdf"
+    },
+    {
+      "date": "2020/05/05",
       "text": "市民の皆さんへ（市長メッセージ）",
       "url": "https://www.city.shizuoka.lg.jp/000_000253.html"
     },
@@ -9,11 +24,6 @@
       "date": "2020/05/01",
       "text": "静岡市子育て支援センター・児童館の臨時休業について",
       "url": "https://www.city.shizuoka.lg.jp/919_000174.html"
-    },
-    {
-      "date": "2020/05/01",
-      "text": "第7回　静岡市新型コロナウイルス感染症対策本部会議を開催しました",
-      "url": "https://www.city.shizuoka.lg.jp/000853230.pdf"
     },
     {
       "date": "2020/05/01",
@@ -34,26 +44,6 @@
       "date": "2020/05/01",
       "text": "静岡市の休業要請に基づく「新型コロナウイルス感染拡大防止協力金」のご案内について",
       "url": "https://www.city.shizuoka.lg.jp/553_000080.html"
-    },
-    {
-      "date": "2020/05/01",
-      "text": "市立学校における臨時休業について",
-      "url": "https://www.city.shizuoka.lg.jp/367_000034.html"
-    },
-    {
-      "date": "2020/05/01",
-      "text": "公共施設の休館等について",
-      "url": "https://www.city.shizuoka.lg.jp/556_000486.html"
-    },
-    {
-      "date": "2020/05/01",
-      "text": "静岡県と協調した「特別利子補給（実質無利子化）」について",
-      "url": "https://www.city.shizuoka.lg.jp/553_000079.html"
-    },
-    {
-      "date": "2020/04/30",
-      "text": "新型コロナウイルスに悩む事業者・勤労者向け無料相談窓口を開設しました【予約制】",
-      "url": "https://www.city.shizuoka.lg.jp/381_000123.html"
     }
   ]
 }
