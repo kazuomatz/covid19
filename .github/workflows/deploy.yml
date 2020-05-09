@@ -3,7 +3,7 @@ name: Production Auto Deploy to AWS S3
 on:
   push:
     branches:
-      - production-shizuoka
+      - feature/fetch_data
 
 jobs:
   deploy:
