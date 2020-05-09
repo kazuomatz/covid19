@@ -3,7 +3,7 @@ name: Development Auto Deploy to AWS S3
 on:
   push:
     branches:
-      - feature/fetch_data
+      - development
 
 jobs:
   deploy:
