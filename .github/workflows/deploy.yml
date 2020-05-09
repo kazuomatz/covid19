@@ -1,4 +1,4 @@
-name: Statging Auto Deploy to AWS S3
+name: Production Auto Deploy to AWS S3
 
 on:
   push:
