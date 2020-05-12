@@ -24,7 +24,9 @@
             <p class="PrintMeta-Text">
               {{ $t('※最新の情報はWebページをご覧ください') }}
             </p>
-            <p class="PrintMeta-Link">https://stopcovid19.city.shizuoka.lg.jp/</p>
+            <p class="PrintMeta-Link">
+              https://stopcovid19.city.shizuoka.lg.jp/
+            </p>
           </div>
         </div>
       </div>
@@ -46,7 +48,9 @@ export default Vue.extend({
       loading: true
     }
   },
-  mounted() {
+  async mounted() {
+    await this.$store.dispatch('data/fetchData')
+
     this.loading = false
     window.addEventListener('load', this.print)
   },

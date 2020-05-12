@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer')
 const environment = process.env.NODE_ENV || 'development'
 
 const config: Configuration = {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -100,7 +100,8 @@ const config: Configuration = {
     ['nuxt-i18n', i18n],
     'nuxt-svg-loader',
     'nuxt-purgecss',
-    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }]
+    ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }],
+    '@nuxtjs/axios'
   ],
   /*
    ** vuetify module configuration
