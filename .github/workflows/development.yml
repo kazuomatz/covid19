@@ -1,13 +1,13 @@
-name: Statging Auto Deploy to AWS S3
+name: Development Auto Deploy to AWS S3
 
 on:
   push:
     branches:
-      - staging-shizuoka
+      - development
 
 jobs:
   deploy:
-    name: Deploy Staging
+    name: Deploy Development
 
     runs-on: ubuntu-latest
 
@@ -31,4 +31,4 @@ jobs:
 
       - name: Copy to s3
         run: |
-          aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_STAGING_PATH }} --recursive --acl public-read
+          aws s3 cp ./dist ${{ secrets.AWS_SECRET_COVID_S3_DEV_PATH }} --recursive --acl public-read

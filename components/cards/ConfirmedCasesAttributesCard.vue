@@ -7,7 +7,7 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'https://dataset.city.shizuoka.jp/dataset/1587117159'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1588408638'"
       :source="$t('オープンデータを入手')"
       :custom-sort="customSort"
     />
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
@@ -25,6 +24,9 @@ export default {
     DataTable
   },
   data() {
+    // // Vuexからデータを取得
+    const Data = this.$store.state.data.data
+
     // 感染者数グラフ
     const patientsGraph = formatGraph(Data.patients_summary.data)
     // 感染者数
@@ -60,7 +62,7 @@ export default {
     }
 
     const data = {
-      Data,
+      Data: this.$store.state.data.data,
       patientsTable,
       sumInfoOfPatients
     }

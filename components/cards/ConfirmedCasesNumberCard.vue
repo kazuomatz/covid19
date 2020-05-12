@@ -7,13 +7,12 @@
       :chart-data="patientsGraph"
       :date="Data.patients.date"
       :unit="$t('人')"
-      :url="'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1588408638'"
     />
   </v-col>
 </template>
 
 <script>
-import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -22,6 +21,9 @@ export default {
     TimeBarChart
   },
   data() {
+    // Vuexからデータを取得
+    const Data = this.$store.state.data.data
+
     // 感染者数グラフ
     const patientsGraph = formatGraph(Data.patients_summary.data)
 

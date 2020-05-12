@@ -39,8 +39,8 @@ import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
-import Data from '@/data/data.json'
-import News from '@/data/news.json'
+// import Data from '@/data/data.json'
+// import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
@@ -62,12 +62,13 @@ export default Vue.extend({
   },
   data() {
     const data = {
-      Data,
+      Data: this.$store.state.data.data,
+      News: this.$store.state.data.news,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: this.$t('市内の最新感染動向')
       },
-      newsItems: News.newsItems
+      newsItems: this.$store.state.data.news.newsItems
     }
     return data
   },

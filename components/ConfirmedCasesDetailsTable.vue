@@ -228,7 +228,6 @@ $default-boxdiff: 35px;
     }
   }
 
-
   /* &.hospitalized {
     margin-left: $default-bdw;
     // [5列] 3/5

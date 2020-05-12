@@ -7,7 +7,7 @@
       :chart-data="graphData"
       :date="data.date"
       :unit="$t('人')"
-      :url="'https://dataset.city.shizuoka.jp/dataset/1586935465'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1588066665'"
     >
       <template v-slot:description>
         <ul>
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
@@ -34,6 +33,9 @@ export default {
     TimeBarChart
   },
   data() {
+    // Vuexからデータを取得
+    const Data = this.$store.state.data.data
+
     const formatData = Data.inspection_persons.labels.map((date, i) => {
       return {
         日付: date,

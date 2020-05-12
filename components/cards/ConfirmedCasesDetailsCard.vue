@@ -24,7 +24,6 @@
 </style>
 
 <script>
-import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
@@ -35,6 +34,9 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
+    // Vuexからデータを取得
+    const Data = this.$store.state.data.data
+
     // 検査陽性者の状況
     const confirmedCases = formatConfirmedCases(Data.main_summary)
 

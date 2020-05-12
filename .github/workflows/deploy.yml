@@ -1,4 +1,4 @@
-name: Statging Auto Deploy to AWS S3
+name: Production Auto Deploy to AWS S3
 
 on:
   push:
@@ -24,11 +24,13 @@ jobs:
       - name: Build
         run: |
           echo "GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}" >> .env.production
+          echo "DATA_URL=${DATA_BASE_URL}" >> .env.production
           cat .env.production
           yarn install
           yarn run generate:deploy --fail-on-page-error
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          DATA_BASE_URL: ${{ secrets.COVID_DATA_PRODUCTION_BASE_URL }}
 
       - name: Copy to s3
         run: |

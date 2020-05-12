@@ -12,38 +12,10 @@
           {{ $t('一般の方') }}
         </p>
       </div>
-      <div>
-        <p>
-          <i18n path="{duration}続いている">
-            <template v-slot:duration>
-              <i18n
-                tag="span"
-                path="{day}日以上"
-                :class="$style.FlowRowEmphasis"
-              >
-                <template v-slot:day>
-                  <span :class="$style.FlowRowEmphasisDay">4</span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
-        </p>
-      </div>
-    </div>
-    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
         <p>
-          <i18n
-            tag="span"
-            path="{cold}のような症状"
-            :class="$style.FlowRowConditionSmall"
-          >
-            <template v-slot:cold>
-              <span :class="$style.FlowRowConditionLarge">
-                {{ $t('風邪') }}
-              </span>
-            </template>
-          </i18n>
+          {{ $t('軽い風邪のような症状') }} <br />
+          {{ $t('（4日以上）') }}
         </p>
         <img
           :class="$style.FlowRowConditionIcon"
@@ -52,24 +24,10 @@
           alt=" "
         />
       </div>
+    </div>
+    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
-        <p>
-          <i18n
-            tag="span"
-            :class="$style.FlowRowConditionSmall"
-            path="発熱{temperature}"
-          >
-            <template v-slot:temperature>
-              <i18n tag="span" path="{tempNum}以上">
-                <template v-slot:tempNum>
-                  <span :class="$style.FlowRowConditionLarge">
-                    {{ $t('37.5℃') }}
-                  </span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
-        </p>
+        <p>{{ $t('息苦しさ') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -87,7 +45,7 @@
         />
       </div>
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('息苦しさ') }}</p>
+        <p>{{ $t('高熱等') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -128,22 +86,16 @@
           </li>
         </ul>
       </div>
-      <div>
+      <div :class="$style.FlowRowCondition">
         <p>
-          <i18n path="{duration}続いている">
-            <template v-slot:duration>
-              <i18n
-                tag="span"
-                path="{day}日程度"
-                :class="$style.FlowRowEmphasis"
-              >
-                <template v-slot:day>
-                  <span :class="$style.FlowRowEmphasisDay">2</span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
+          {{ $t('軽い風邪のような症状') }}
         </p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
       </div>
     </div>
   </div>

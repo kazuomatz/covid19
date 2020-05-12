@@ -15,7 +15,11 @@
           @closeNavi="hideNavigation"
         />
       </div>
-      <main class="mainContainer" :class="{ open: isOpenNavigation }">
+      <main
+        v-if="!loading"
+        class="mainContainer"
+        :class="{ open: isOpenNavigation }"
+      >
         <v-container class="px-4 py-8">
           <nuxt />
         </v-container>
@@ -71,7 +75,9 @@ export default Vue.extend({
       isOpenNavigation: false
     }
   },
-  mounted() {
+  async mounted() {
+    await this.$store.dispatch('data/fetchData')
+
     this.loading = false
     this.getMatchMedia().addListener(this.hideNavigation)
   },
