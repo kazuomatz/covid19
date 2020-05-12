@@ -103,9 +103,6 @@ const config: Configuration = {
     ['vue-scrollto/nuxt', { duration: 1000, offset: -72 }],
     '@nuxtjs/axios'
   ],
-  router: {
-    middleware: ['fetchData']
-  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
