@@ -1,31 +1,32 @@
 <template>
-  <ul :class="$style.container">
-    <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
-      <div :class="$style.pillar">
-        <div :class="$style.content">
-          <span>
-            {{ $t('陽性者数') }}
-            <br />({{ $t('累計') }})
-          </span>
-          <span>
-            <strong>{{ 陽性者数.toLocaleString() }}</strong>
-            <span :class="$style.unit">{{ $t('人') }}</span>
-          </span>
-        </div>
-      </div>
-      <ul :class="$style.group">
-        <li :class="[$style.box, $style.hospitalized]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('入院中') }}</span>
-              <span>
-                <strong>{{ 入院中.toLocaleString() }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
+  <div>
+    <ul :class="$style.container">
+      <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
+        <div :class="$style.pillar">
+          <div :class="$style.content">
+            <span>
+              {{ $t('陽性者数') }}
+              <br />({{ $t('累計') }})
+            </span>
+            <span>
+              <strong>{{ 陽性者数.toLocaleString() }}</strong>
+              <span :class="$style.unit">{{ $t('人') }}</span>
+            </span>
           </div>
+        </div>
+        <ul :class="$style.group">
+          <li :class="[$style.box, $style.hospitalized]">
+            <div :class="$style.pillar">
+              <div :class="$style.content">
+                <span>{{ $t('入院中') }}</span>
+                <span>
+                  <strong>{{ 入院中.toLocaleString() }}</strong>
+                  <span :class="$style.unit">{{ $t('人') }}</span>
+                </span>
+              </div>
+            </div>
 
-          <!--
+            <!--
           <ul :class="$style.group">
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
@@ -53,32 +54,34 @@
             </li>
           </ul>
 -->
-        </li>
-        <li :class="[$style.box, $style.deceased]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('死亡') }}</span>
-              <span>
-                <strong>{{ 死亡.toLocaleString() }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
+          </li>
+          <li :class="[$style.box, $style.deceased]">
+            <div :class="$style.pillar">
+              <div :class="$style.content">
+                <span>{{ $t('死亡') }}</span>
+                <span>
+                  <strong>{{ 死亡.toLocaleString() }}</strong>
+                  <span :class="$style.unit">{{ $t('人') }}</span>
+                </span>
+              </div>
             </div>
-          </div>
-        </li>
-        <li :class="[$style.box, $style.recovered]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('退院') }}</span>
-              <span>
-                <strong>{{ 退院.toLocaleString() }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
+          </li>
+          <li :class="[$style.box, $style.recovered]">
+            <div :class="$style.pillar">
+              <div :class="$style.content">
+                <span>{{ $t('退院') }}</span>
+                <span>
+                  <strong>{{ 退院.toLocaleString() }}</strong>
+                  <span :class="$style.unit">{{ $t('人') }}</span>
+                </span>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note">※{{ $t('入院準備中の方等は内訳に含まれません') }}</div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -149,6 +152,11 @@ $default-boxdiff: 35px;
 
 // .container > .box > (.group > .box > ...) .pillar > .content
 
+.note {
+  padding: 8px;
+  font-size: 12px;
+  color: #707070;
+}
 .container {
   width: 100%;
   display: flex;
