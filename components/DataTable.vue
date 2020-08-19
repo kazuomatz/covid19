@@ -43,7 +43,9 @@
     <div class="note">
       {{ $t('※1 退院には、死亡退院を含む') }}<br />
       {{ $t('※2 ') }}
-      <a href="https://www.city.shizuoka.lg.jp/388_000109.html" target="_blank"
+      <a
+        href="https://www.city.shizuoka.lg.jp/388_000109.html#h2_7"
+        target="_blank"
         >{{ $t('静岡市公式HP') }}
         <i
           aria-label="別タブで開く"
