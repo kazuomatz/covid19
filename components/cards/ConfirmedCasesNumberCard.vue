@@ -7,7 +7,7 @@
       :chart-data="patientsGraph"
       :date="Data.patients.date"
       :unit="$t('人')"
-      :url="'https://dataset.city.shizuoka.jp/dataset/1588408638'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1589801834'"
     />
   </v-col>
 </template>

@@ -196,7 +196,12 @@ export default Vue.extend({
           title: this.$t('市長からのメッセージ'),
           link: 'https://www.city.shizuoka.lg.jp/000_000253.html'
         },
-
+        {
+          title: this.$t(
+            '新型コロナウイルス感染症に伴う給付金や助成金等の主な支援'
+          ),
+          link: 'https://www.city.shizuoka.lg.jp/268_000198.html'
+        },
         {
           title: this.$t('商業者支援特設ウェブサイト「＃エール静岡」'),
           link: 'https://www.at-s.com/city/yellshizuoka/'

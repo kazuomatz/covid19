@@ -7,7 +7,7 @@
       :chart-data="graphData"
       :date="data.date"
       :unit="$t('人')"
-      :url="'https://dataset.city.shizuoka.jp/dataset/1588066665'"
+      :url="'https://dataset.city.shizuoka.jp/dataset/1589884392'"
     >
       <template v-slot:description>
         <ul>

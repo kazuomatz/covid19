@@ -4,14 +4,14 @@
       <a
         href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_1"
         target="_blank"
-        >発生状況について（感染が疑われる経路含む）</a
-      >
-      <i
-        aria-label="別タブで開く"
-        role="img"
-        class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light"
-        style="font-size: 15px;"
-      />
+        >発生状況について（感染が疑われる経路含む）
+        <i
+          aria-label="別タブで開く"
+          role="img"
+          class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light"
+          style="font-size: 15px;"
+        />
+      </a>
     </div>
     <template v-slot:button>
       <span />
@@ -41,7 +41,20 @@
       </template>
     </v-data-table>
     <div class="note">
-      {{ $t('※退院には、死亡退院を含む') }}
+      {{ $t('※1 退院には、死亡退院を含む') }}<br />
+      {{ $t('※2 ') }}
+      <a
+        href="https://www.city.shizuoka.lg.jp/388_000109.html#h2_7"
+        target="_blank"
+        >{{ $t('静岡市公式HP') }}
+        <i
+          aria-label="別タブで開く"
+          role="img"
+          class="v-icon notranslate ExternalLinkIcon mdi mdi-open-in-new theme--light"
+          style="font-size: 15px;"
+        />
+      </a>
+      {{ $t('にて統計情報を公開しています') }}
     </div>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
@@ -114,6 +127,9 @@
   padding: 8px;
   font-size: 12px;
   color: $gray-3;
+  a:link {
+    text-decoration: none;
+  }
 }
 .portal-link {
   margin-top: -30px;
