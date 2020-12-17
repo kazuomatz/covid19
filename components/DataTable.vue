@@ -41,7 +41,7 @@
       </template>
     </v-data-table>
     <div class="note">
-      {{ $t('※1 退院には、死亡退院を含む') }}<br />
+      {{ $t('※1 退院には、死亡退院を含みます') }}<br />
       {{ $t('※2 ') }}
       <a
         href="https://www.city.shizuoka.lg.jp/388_000109.html#h2_7"
