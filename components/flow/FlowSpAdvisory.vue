@@ -3,7 +3,7 @@
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
       {{ $t('新型コロナ受診相談窓口') }}
       <small :class="[$style.break, $style.fzRegular, $style.mt5]">
-        {{ $t('帰国者・接触者相談センター（静岡市保健所）') }}
+        {{ $t('発熱等受診相談センター（静岡市保健所）') }}
       </small>
     </h4>
     <p :class="[$style.open, $style.fzMedium]">
