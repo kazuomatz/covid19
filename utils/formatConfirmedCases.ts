@@ -55,7 +55,7 @@ export default (data: DataType) => {
     入院中: data.children[0].children[0].value,
     軽症中等症: data.children[0].children[0].children[0].value,
     重症: data.children[0].children[0].children[1].value,
-    死亡: data.children[0].children[2].value + 26 /* 強制的に+26 */,
+    死亡: data.children[0].children[2].value + 27 /* 強制的に+27 */,
     退院: data.children[0].children[1].value
   }
   return formattedData
