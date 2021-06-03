@@ -53,7 +53,7 @@
       </nav>
 
       <a
-        href="https://www.city.shizuoka.lg.jp/388_000101.html#h2_3"
+        href="https://www.city.shizuoka.lg.jp/000_004012_00005.html"
         target="_blank"
       >
         <img src="/dial.jpg" />
@@ -166,7 +166,7 @@ export default Vue.extend({
         },
         {
           title: this.$t('新型コロナウイルスなんでも相談ダイヤル'),
-          link: 'https://www.city.shizuoka.lg.jp/388_000101.html#h2_3',
+          link: 'https://www.city.shizuoka.lg.jp/000_004012_00005.html',
           divider: true
         },
 
