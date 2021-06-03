@@ -203,16 +203,6 @@ export default Vue.extend({
           link: 'https://www.city.shizuoka.lg.jp/268_000198.html'
         },
         {
-          title: this.$t('商業者支援特設ウェブサイト「＃エール静岡」'),
-          link: 'https://www.at-s.com/city/yellshizuoka/'
-        },
-
-        {
-          title: this.$t('民間支援情報ナビ For 静岡県版（非公式）'),
-          link: 'https://vs-covid19-shizuoka.netlify.app'
-        },
-
-        {
           title: this.$t('当サイトについて'),
           link: this.localePath('/about')
         },
